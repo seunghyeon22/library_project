@@ -1,0 +1,103 @@
+#main .select_bar .focus{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.loanBook_contents{
+    display: flex;
+    flex-direction: column;
+    width: 920px;
+    height: 800px;
+    /* background-color: aqua; */
+    
+}
+
+.loanBook_List{
+    margin:  50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 900px;
+}
+
+.loanBook_List h2{
+    font-size: 22px;
+    line-height: 50px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.loanBook_table{
+    border: 2px solid #000;
+    border-bottom: 0;
+    border-right: 0;
+    border-collapse: collapse;
+}
+
+.loanBook_table th{
+    font-weight: 900;
+    background-color: skyblue;
+}
+
+.loanBook_table td,th{
+    text-align: center;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.return_btn{
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(224, 26, 26);
+    color: #dbdbdb;
+}
+
+.loanBook_table td:nth-child(1){
+    font-weight: 900;
+    width: 100px;
+}
+
+.loanBook_table td:nth-child(2){
+    width: 300px;
+}
+
+.loanBook_table td:nth-child(3){
+    width: 200px;
+}
+
+.loanBook_table td:nth-child(4){
+    width: 200px;
+}
+
+.loanBook_table td:nth-child(5){
+    width: 170px;
+}
+
+.loanBook_table td:nth-child(6){
+    width: 150px;
+}
+
+.loanBook_table td:last-child{
+    font-weight: 700;
+    color: cornflowerblue;
+    width: 150px;
+}
+
+
+
+
+/* foooter */
+footer{
+    position: absolute;
+    top: 1250px;
+}

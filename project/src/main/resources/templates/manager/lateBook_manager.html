@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<th:block th:replace="/all/head"></th:block>
+    <title>연체도서관리</title>
+    <link rel="stylesheet" href="/static/css/manager/lateBook_manager.css">
+</head>
+<body>
+    <body>
+        <div id="container">
+            <!--상단-->
+	<th:block th:replace="/all/header"></th:block>  
+            
+        <div class="main_img">
+            <img src="/static/images/wood-2045379_1920.jpg" alt="">
+            <div class="menu">
+                <h2>도서관리</h2>
+            </div>
+        </div>
+        <!--메인-->
+        <section id="main">
+            <div class="main_all">
+                <div class="main_h">
+                    <div class="select_bar">
+                        <ul>
+                            <li><a href="/lib/totalLoanBook"><span>도서목록관리</span></a></li>
+                            <li><a href="/lib/totalLoanBook">대여도서관리</a></li>
+                            <li><a href="/lib/totalLateBook" class="focus">연체도서관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                    <div class="main_m">
+                        <div class="top_box">
+                            <div class="top_bar">
+                                <ul>
+                                    <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+                                    <li>><span>도서관리목록</span></li>
+                                    <li>>><span>연체도서관리</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contents">
+                            <div class="lateBook_contents">
+                                <div class="lateBook_List">
+                                    <h2><img src="/static/images/Title_logo.png" alt=""> 연체도서 관리</h2>
+                                        <table class="lateBook_table">
+                                        	<thead>
+	                                            <tr >
+	                                                <th>번호</th>
+	                                                <th>도서명</th>
+	                                                <th>대여날짜</th>
+	                                                <th>반납기한</th>
+	                                                <th><span>연체기한</span></th>
+	                                            </tr>                                        	
+                                        	</thead>
+                                    <!-- 대여도서 리스트 -->
+                                    		<tbody>
+	                                            
+                                    		</tbody>
+                                        </table>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--하단-->
+<th:block th:replace="/all/footer"></th:block>  
+        </div>
+        <script type="text/javascript" src="/static/js/manager/totalLateBook.js"></script>
+    </body>
+    </html>

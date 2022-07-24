@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<th:block th:replace="/all/head"></th:block>
+<title>신간 도서</title>
+<link rel="stylesheet" href="/static/css/book/newbook.css">
+<script src="https://kit.fontawesome.com/6786e3c387.js" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <div id="container">
+                <!--상단-->
+ 	<th:block th:replace="/all/header"></th:block> 
+                <div class="main_img">
+                    <img src="/static/images/wood-2045379_1920.jpg" alt="">
+                    <div class="menu">
+                        <h2>자료 검색</h2>
+                    </div>
+                </div>
+                <!--메인-->
+                <section id="main">
+                    <div class="main_h">
+                        <div class="select_bar">
+                            <ul>
+                                <li><a href="/book/bookselect"><span>자료 검색</span></a></li>
+                                <li><a href="/book/bestbook">인기 도서</a></li>
+                                <li><a href="/book/newbook" class="focus">신간 도서</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main_m">
+                        <div class="top_box">
+                            <div class="top_bar">
+                                <ul>
+                                    <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+                                    <li>><span>자료 검색</span></li>
+                                    <li>>><span>신간 도서</span></li>
+                                </ul>
+                            </div>
+                            <div class="populer_book">
+                                <div class="main-box">
+                                    <div class="page-title-area">
+                                        <h2 class="tit">신간 도서</h2>
+                                    </div>
+                                     <div class="search-wrap">
+                                       
+                                     </div>
+                                     <div class="col-table">
+                                             <div class="smain">
+                                                 <div class="sbox">
+                                                     <div class="search-results">
+                                                        <div class="row">
+                                                           
+                                                        </div>
+                                                        
+                                                        
+                                                        
+                                                     </div>
+            
+                                                 </div>
+                                             </div>
+                                            
+                                         </div>
+                                         <div class="pagination">
+                                         </div>
+                                        </div>
+                                     
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <!--하단-->
+<th:block th:replace="/all/footer"></th:block>  
+            </div>
+		</div>
+		 <script type="text/javascript" src="/static/js/book/newbook.js"></script>  
+	</body>
+</html>

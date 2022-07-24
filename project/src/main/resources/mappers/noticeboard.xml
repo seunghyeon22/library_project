@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.library.project.domain.noticeBoard.NoticeBoardRepository">
+
+	<select id="noticeBoardList" resultType="com.library.project.domain.noticeBoard.NoticeMst">
+		select
+			*
+		from
+			notice_mst
+	
+	</select>
+	
+	<select id="noticeBoardListByPage" resultType="com.library.project.domain.noticeBoard.NoticeMst">
+		select
+			noticecode,
+			notice_title,
+			notice_username,
+			notice_contents,
+			create_date,
+			update_date,
+			(select count(*) from notice_mst) as total_count
+		from
+			notice_mst
+		order by
+			noticecode desc
+		limit #{index}, 10;
+	</select>
+	<select id="search"  parameterType= "com.library.project.domain.noticeBoard.SearchNoticeBoard" resultType="com.library.project.domain.noticeBoard.NoticeMst">
+		select
+			*,
+			(select count(*) from notice_mst where notice_title like concat('%', #{keyword},'%')) as total_count
+		from
+			notice_mst
+		where
+			notice_title like concat('%', #{keyword},'%')
+		order by
+		noticecode desc
+		limit #{index}, 10;
+	</select>
+	
+	<insert id="insertNoticeBoard" parameterType="com.library.project.domain.noticeBoard.NoticeMst"
+	useGeneratedKeys="true" keyProperty="noticecode">
+		insert into
+			notice_mst
+		values(
+			0,
+			#{notice_title},
+			#{notice_username},
+			#{notice_contents},
+			now(),
+			now()
+		)
+	</insert>
+	
+	<select id="getNoticeBoardByNoticeCode" parameterType="Integer" resultType="com.library.project.domain.noticeBoard.NoticeMst">
+		select
+			*
+		from
+			notice_mst
+		where
+			noticecode = #{noticecode}
+	</select>
+	
+	<update id="updateNoticeBoard" parameterType="com.library.project.domain.noticeBoard.NoticeMst"
+	useGeneratedKeys="true" keyProperty="noticecode">
+		update
+			notice_mst
+		set
+			notice_title = #{notice_title},
+			notice_contents = #{notice_contents}
+		where
+			noticecode = #{noticecode}
+	</update>
+	
+	<delete id="deleteNoticeBoard" parameterType="Integer">
+		delete
+		from
+			notice_mst
+		where
+			noticecode = #{noticecode}
+	</delete>
+</mapper>

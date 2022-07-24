@@ -1,0 +1,45 @@
+#main .select_bar .focus{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.dirction_box{
+    padding: 20px 0 0 30px;
+    margin: 10px auto;
+    width: 100%;
+    height: 600px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+}
+
+.dirction_box h2{
+    line-height: 70px;
+    font-size: 28px;
+    /* text-decoration: underline; */
+    color: #000;
+    
+}
+
+.dirction_box .Map{
+    border-top: 1px solid #ccc;
+    width: 100%;
+    height: 450px;
+}
+
+
+.dirction_box iframe{
+    margin-top: 40px;
+    width: 100%;
+    height: 500px;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+}
+
+footer{
+    position: absolute;
+    top: 1200px;
+}

@@ -1,0 +1,295 @@
+input {
+	cursor: pointer;
+}
+
+#main .select_bar .focus {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+
+#main .main_title {
+    box-sizing: border-box;
+    width: 1000px;
+    height: 67px;
+    padding: 10px 0 15px;
+    border-bottom: 2px dashed #ccc;
+}
+#main .main_title h3 {
+    font-size: 28px;
+}
+
+#main .contents {
+    display: flex;
+    width: 1000px;
+}
+
+#main .main_table {
+    width: 1000px;
+    margin-top: 15px;
+}
+
+#main .main_table table {
+    width: 1000px;
+    border-top: 3px solid #ccc;
+    border-collapse: collapse;
+}
+
+#main .main_table th {
+    width: 200px;
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(246, 246, 246);
+}
+#main .main_table td {
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#main .main_table .first_th {
+    border-top: 1px solid #ccc;
+}
+
+#main .main_table .first_tr {
+    border-top: 1px solid #ccc;
+}
+
+#main .main_table .tr1 {
+    height: 50px;
+}
+
+#main .id_input {
+    display: flex;    
+}
+
+#main .id_input input {
+    box-sizing: border-box;
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+    border: none;
+    pointer-events: none;
+}
+
+#main .id_input_text p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#main .main_table .tr4 {
+    height: 50px;
+}
+
+#main .name_input input {
+    box-sizing: border-box;
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+    border: none;
+    pointer-events: none;
+}
+
+#main .main_table .tr5 {
+    height: 50px;
+}
+
+#main .gender_input input {
+    box-sizing: border-box;
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 50px;
+    height: 35px;
+    font-size: 16px;
+    border: none;
+    pointer-events: none;
+    
+}
+
+#main .main_table .tr6 {
+    height: 50px;
+}
+
+#main .year_input input {
+    box-sizing: border-box;     
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+    border: none;
+    pointer-events: none;
+}
+#main .main_table .tr7 {
+    height: 60px;
+}
+
+#main .tel_input .tel {
+    box-sizing: border-box;     
+    padding-left: 3px;
+    margin:10px 0 0 10px;
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#main .tel_input .tel_check {
+    width: 14px;
+    height: 14px;
+    margin: 0 5px 0 10px;
+}
+
+#main .tel_input_text {
+    box-sizing: border-box;
+    width: 775px;
+    height: 40px;
+    margin: 10px 0 10px 10px;
+    padding: 2px 0 0 5px;
+    background-color: rgba(0, 128, 0, 0.459);
+}
+#main .tel_input_text p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#main .tel_input_btn {
+    box-sizing: border-box;
+    height: 35px;
+    margin: 10px 0 0 10px;
+}
+
+#main .tel_input_btn button {
+    box-sizing: border-box;
+    width: 150px;
+    height: 25px;
+    padding-bottom: 2px;
+    background-color: blue;
+    border: none;
+    border-radius: 3px;
+
+}
+
+#main .tel_input_btn a {
+    color: white;
+}
+
+#main .main_table .tr8 {
+    height: 150px;
+}
+
+#main .address_input input {
+    box-sizing: border-box;     
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#main .address_input button {
+    margin-left: 5px;
+    width: 100px;
+    height: 35px;
+}
+
+#main .adress_input2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#main .adress_input2 input {
+    box-sizing: border-box;     
+    padding-left: 3px;
+    margin: 5px 0 0 10px;
+    width: 600px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#sample6_postcode {
+	cursor: default;
+}
+
+#sample6_postcode:focus {
+	outline: none;
+}
+
+#sample6_address {
+	cursor: default;
+}
+#sample6_address:focus {
+	outline: none;
+}
+
+#main .main_table .tr9 {
+    height: 80px;
+}
+
+#main .email_input input{
+    box-sizing: border-box;     
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#main .email_input span {
+    margin-left: 10px;
+}
+
+#main .email_input_check {
+    width: 14px;
+    height: 14px;
+    margin: 10px 5px 0 10px;
+}
+
+#main .email_input select {
+    margin-left: 5px;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#main .submit_btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#main .submit_btn button {
+    margin: 10px 20px 30px 0;
+    
+}
+
+#main .submit_btn .btn_ok {
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+    
+}
+
+#main .submit_btn .btn_no {
+    width: 70px;
+    height: 40px;
+    border: none;
+    background-color: #ccc;
+}
+
+#main .submit_btn .btn_no a {
+	color: white;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+footer{
+    position: absolute;
+    top: 1300px;
+}

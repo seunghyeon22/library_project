@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.library.project.domain.rentalAndLateBook.RentalAndLateBookRepository">
+	<select id="getRentalBookListAll" resultType="com.library.project.domain.rentalAndLateBook.RentalAndLateBook">
+		select
+			rental_code,
+			ud.bookcode,
+			ud.bookname,
+			rental_date,
+			return_date,
+			rental_status
+		from
+			rental_book um
+			left outer join book_mst ud on(ud.bookcode = um.bookcode)
+		where
+			rental_status = 1 and usercode = #{usercode}
+	</select>
+	
+	<select id="getLateBookListAll" resultType="com.library.project.domain.rentalAndLateBook.RentalAndLateBook">
+		select
+			rental_code,
+			ud.bookcode,
+			bookname,
+			rental_date,
+			return_date,
+			rental_status
+		from
+			rental_book um
+			left outer join book_mst ud on(ud.bookcode = um.bookcode)
+		where
+			rental_status = 1 and usercode = #{usercode} 
+	</select>
+</mapper>

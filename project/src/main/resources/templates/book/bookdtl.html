@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<th:block th:replace="/all/head"></th:block>
+<title>도서 상세</title>
+<link rel="stylesheet" href="/static/css/book/bookdtl.css">
+	<script src="https://kit.fontawesome.com/6786e3c387.js" crossorigin="anonymous"></script>
+ 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!--상단-->
+<th:block th:replace="/all/header"></th:block> 
+        
+        <div class="main_img">
+            <img src="/static/images/wood-2045379_1920.jpg" alt="">
+            <div class="menu">
+                <h2>자료 검색</h2>
+            </div>
+        </div>
+        <!--메인-->
+        <section id="main">
+            <div class="main_h">
+                <div class="select_bar">
+                    <ul>
+                        <li><a href="/book/bookselect"><span>자료 검색</span></a></li>
+                        <li><a href="/book/bestbook">인기 도서</a></li>
+                        <li><a href="/book/newbook">신간 도서</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_m">
+                <div class="top_box">
+                    <div class="top_bar">
+                        <ul>
+                            <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+                            <li>><span>자료 검색</span></li>
+                            <li>>><span>도서 상세 확인</span></li>
+                        </ul>
+                    </div>
+                    <div class="ssss">
+                        <div class="main-box">
+                            <div class="page-title-area">
+                                <h2 class="tit"><img src="/static/images/Title_logo.png" alt=""> 도서 상세 확인</h2>
+                            </div>
+                            <div class="search-wrap">
+                                <div class="sview">
+                                    <div class="sinfo">
+                                        <div class="thumb">
+                                            <p class="noImg">
+                                                <img src="/static/images/default.png" alt="">
+                                            </p>
+                                        </div>
+                                        <div class="info">
+                                            <ul>
+                                                <li style="line-height: 150%;"><b>제목 : Big Sleep</b></li>
+                                                <li><strong>코드 : AYG000003343</strong></li>
+                                                <li><strong>청구기호 : ----------</strong></li>
+                                                <li><strong>저자 : by Raymond Chandler</strong></li>
+                                                <li><strong>출판사 : ---------</strong></li>
+                                                <li><strong>출판년도 : 2021</strong></li>
+                                                <li><strong>줄거리 : ------------------------------------------------------------------------------------------------------------------------</strong></li>
+                                                <li><button type="button" class="rental-btn"><i class="fa-solid fa-book"> 대여하기</i></button> <button class="update-btn"> <i class="fa-solid fa-pencil"> 수정하기</i><button class="update-btn"> <i class="fa-solid fa-pencil"> 삭제하기</i></button></button></li> 
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!--하단-->
+<th:block th:replace="/all/footer"></th:block>  
+    </div>
+    </div>
+</div>
+<script type="text/javascript" src="/static/js/book/bookdtl.js"></script>
+</body>
+</html>

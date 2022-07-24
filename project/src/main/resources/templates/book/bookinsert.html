@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html  lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<th:block th:replace="/all/head"></th:block>
+    <title>도서추가</title>
+    <link rel="stylesheet" href="/static/css/book/bookinsert.css">
+    <script src="https://kit.fontawesome.com/6786e3c387.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!--상단-->
+<th:block th:replace="/all/header"></th:block> 
+        
+        <div class="main_img">
+            <img src="/static/images/wood-2045379_1920.jpg" alt="">
+            <div class="menu">
+                <h2>자료 검색</h2>
+            </div>
+        </div>
+        <!--메인-->
+        <section id="main">
+            <div class="main_h">
+                <div class="select_bar">
+                    <ul>
+                        <li><a href="/book/bookinsert"><span>도서 관리</span></a></li>
+                        <li><a href="/book/bookinsert" class="focus">도서 추가</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_m">
+                <div class="top_box">
+                    <div class="top_bar">
+                        <ul>
+                            <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+                            <li>><span>도서 관리</span></li>
+                            <li>>><span>도서 추가</span></li>
+                        </ul>
+                    </div>
+                    <div class="ssss">
+                        <div class="main-box">
+                            <div class="page-title-area">
+                                <h2 class="tit"><img src="/static/images/Title_logo.png" alt=""> 도서 추가</h2>
+                            </div>
+                            <form enctype="multipart/form-data" class="insert-form">
+                                <div class="img-container">
+                                    <div class="img-box">
+                                        <img class="img_load" src="/static/images/default.png" alt="">
+                                    </div>
+                                    <input type="file" class="book-file-img" name="file" id="book-file-img">
+                                </div>
+                                <div class="input-box">
+                                    <div class="input-bar">
+                                        <div class="input">
+                                            <div class="input-name"> 코드</div>
+                                            <div><input type="text" name="bookcode" class="input-datas"></div>
+                                        </div>
+                                        <div class="input">
+                                            <div class="input-name"> 청구기호</div>
+                                            <div><input type="text" name=call_sign class="input-datas"></div>
+                                        </div>
+                                        <div class="input">
+                                            <div class="input-name"> 제목</div>
+                                            <div><input type="text" name="bookname" class="input-datas"></div>
+                                        </div>
+                                        <div class="input">
+                                            <div class="input-name"> 저자</div>
+                                            <div><input type="text" name="author" class="input-datas"></div>
+                                        </div>
+                                        <div class="input">
+                                            <div class="input-name"> 출판사</div>
+                                            <div><input type="text" name="publisher" class="input-datas"></div>
+                                        </div>
+                                        <div class="input">
+                                            <div class="input-name"> 출판년도</div>
+                                            <div><input type="text" name="year_of_publication " class="input-datas"></div>
+                                        </div>
+                                        <div class="input -textar">
+                                            <div class="input-name"> 줄거리</div>
+                                            <textarea name="summary" class="input-text"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="button-box">
+                                        <button type="button" class="sub-btn">도서 추가</button>
+                                        <button type="button" class="del-btn">취소</button>
+                                    </div>
+                                </div>
+                            </form>
+                             
+                             
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--하단-->
+<th:block th:replace="/all/footer"></th:block>  
+    </div>
+    <script type="text/javascript" src="/static/js/book/bookinsert.js"></script>
+</body>
+</html>

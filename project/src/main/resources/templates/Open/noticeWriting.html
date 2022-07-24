@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="/all/head"></th:block>
+    <title>자유게시판 글쓰기</title>
+    <link rel="stylesheet" href="/static/css/Open/noticeWriting.css">
+</head>
+<body>
+    <div id="container">
+        <!--상단-->
+<th:block th:replace="/all/header"></th:block> 
+        
+        <div class="main_img">
+            <img src="/static/images/wood-2045379_1920.jpg" alt="">
+            <div class="menu">
+                <h2>열린공간</h2>
+            </div>
+        </div>
+        <!--메인-->
+        <section id="main">
+            <div class="main_h">
+                <div class="select_bar">
+                    <ul>
+                        <li><a href="/book/notice" class="focus"><span>공지사항</span></a></li>
+                        <li><a href="/book/qAndA">Q&A</a></li>
+                        <li><a href="/book/bulletin" >자유게시판</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_m">
+                <div class="top_box">
+                    <div class="top_bar">
+                        <ul>
+                            <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+                            <li>><span>열린공간</span></li>
+                            <li>>><span>공지사항</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="board_list_wrap">
+                    <div class="board_list_title">
+                        <h2>공지사항</h2>
+                    </div>
+                    <div class="box-table">
+                        본 게시판은 도서관에 대한 건전한 제안, 의견, 문의사항 등에 대하여 신속하게
+                        해결하기 위하여 운영되고 있으므로, 도서관고 관련없는
+                        홍보, 광고 내용, 용설 등 불건전 내용에 대해서는 직권으로 삭제함을 알려드리며,
+                        의견을 게재할 경우에는 반드시 실명을 기입하셔야 하며, 그렇지 않을 경우에는
+                        민원사무 처리에 관한 법률 등의 규정에 의거하여 접수되지 않아 미담변, 삭제 등
+                        의 조치를 취할 수 있음을 알려드립니다.
+                    </div>
+                    <div class="board_write">
+                        <table class="board_list">
+                            <caption>게시판 목록</caption>
+                            <tbody>
+                            	<tr>
+                                    <td>제목</td>
+                                    <td><input type="text" class="input_items" placeholder="제목"></td>
+                                </tr>
+                                <tr>
+                                    <td>이름</td>
+                                    <td><input type="text" class="input_items border" readonly="readonly"></td>
+                                </tr>
+                                <tr>
+                                    <td>내용</td>
+                                    <td><textarea class="textarea_item" name="textarea" placeholder="내용입력"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="board_btn">
+                        <button type="button" class="submit_btn">저장</button>
+                        <button type="button" class="back_btn" >취소</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--하단-->
+<th:block th:replace="/all/footer"></th:block>  
+    </div>
+    <script type="text/javascript" src="/static/js/board/noticeWriting.js"></script>
+</body>
+</html>

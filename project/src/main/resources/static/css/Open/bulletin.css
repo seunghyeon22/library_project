@@ -1,0 +1,156 @@
+#main .select_bar .focus{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    display: none;
+}
+
+.board_list_wrap {
+	display : flex;
+	flex-direction: column;
+	border-collapse: collapse;
+    width: 950px;
+    height: 800px;
+}
+
+.board_list {
+    border-top: 3px solid rgb(51, 177, 93);
+}
+
+.board_list tr {
+    border: 1px solid #ccc;
+}
+
+.board_list th,
+.board_list td {
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 14px;
+
+}
+
+.board_list td {
+    text-align: center;
+}
+
+.num {
+    width: 180px;
+}
+
+.name {
+    width: 200px;
+}
+
+.date {
+    width: 200px;
+}
+
+.board_list .tit {
+    text-align: left;
+    width: 700px;
+}
+
+.board_list .tit :hover {
+    text-decoration: underline;
+}
+
+.board_list_wrap .paging {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.board_list_wrap .paging div {
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+.board_list_wrap .paging div.next_btn {
+	margin: 5px;
+}
+
+.board_list_wrap .paging div.nums {
+	border: 1px solid #5d81d3;
+	margin: 5px 5px 5px 0px;
+	padding: 5px 10px;
+}
+
+.board_list_title {
+    margin-top: 30px;
+    border-bottom: 1px dashed #ccc;
+    width: 100%;
+    height: 60px;
+}
+
+.board_list_title h2 {
+    font-size : 30px;
+}
+
+.board_list_sub {
+    display: flex;
+    justify-content: right;
+    height: 40px;
+    padding: 10px;
+    padding-right: 0px;
+    line-height: 20px;
+    margin-bottom: 20px;
+
+}
+
+.board_list_sub input {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    height: 35px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.board_list_sub button {
+    height: 38px;
+    padding: 0 20px;
+    overflow: hidden;
+    text-align: unset;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #3671c8;
+    font-weight: bold;
+    color: #ffff;
+    cursor: pointer;
+    
+}
+
+.board_list_btn {
+	display : flex;
+    justify-content: right;
+    margin-top: 5px;
+}
+
+.board_list_btn button {
+    width: 70px;
+    height: 35px;
+    border: 0px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(54, 86, 156);
+    cursor: pointer;
+}
+
+footer{
+	position: absolute;
+    top: 1300px;
+}

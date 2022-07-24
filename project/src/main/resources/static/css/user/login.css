@@ -1,0 +1,210 @@
+#main .select_bar .focus {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+
+#main .main_title {
+    box-sizing: border-box;
+    width: 1000px;
+    height: 67px;
+    padding: 10px 0 15px;
+    border-bottom: 2px dashed #ccc;
+}
+#main .main_title h3 {
+    font-size: 28px;
+}
+
+#main .login_all {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    
+}
+
+#main .login_all .login_zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0 50px 0;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    width: 600px;
+    height: 320px;
+
+}
+
+#main .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+#main .login_all .login_input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+#main .login_input input {
+    width: 300px;
+    height: 50px;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#main .login_input input:first-child {
+    border-bottom: 2px solid #ccc;
+}
+
+#main .login_input input:last-child {
+    margin-top: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+#main .login_btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    width: 220px;
+    height: 180px;
+    margin: 20px 0 5px 10px;
+}
+
+#main .login_btn img{
+    cursor: pointer;
+    width: 180px;
+    height: 50px;
+}
+
+#main .login_btn span{
+    line-height: 20px;
+}
+
+#main .login_btn button{
+    cursor: pointer;
+    width: 180px;
+    height: 55px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: darkblue;
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+#main .login_etc {
+    display: flex;
+    margin-left: 250px;
+    line-height: 80px;
+    width: 100%;
+    /* background-color: aqua; */
+}
+#main .login_etc ul {
+    display: flex;
+}
+#main .login_etc li a {
+    font-size: 16px;
+    color: rgb(19, 17, 17);
+}
+
+#main .login_etc li::after {
+    margin: 0 20px;
+    content: "|";
+}
+
+#main .login_etc li:last-child::after {
+    content: none;
+}
+
+#main .qick_login {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    margin-bottom: 50px;
+}
+
+#main .qick_login button {
+    border: none;
+}
+
+#main .qick_login img {
+    width: 200px;
+    height: 50px;
+}
+
+
+
+/* foooter */
+footer{
+    position: absolute;
+    top: 1050px;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(198, 193, 193);
+    opacity: 0.8;
+    display: flex;
+}
+
+.footer_in{
+    display: flex;
+    width: 100%;
+    height: 120px;
+    padding-left: 100px;
+}
+
+.footer_buttons{
+    display: flex;
+}
+
+.footer_buttons button{
+    margin-left: 40px;
+    border: 0;
+    outline: none;
+    width: 130px;
+    height: 120px;
+    text-align: center;
+    background-color: rgb(198, 193, 193);
+}
+
+.footer_buttons span{
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.footer_contents{
+    padding: 20px 0px 0px 50px;
+    display: flex;
+    width: 1100px;
+    height: 100px;
+}
+
+.footer_logo{
+    width: 120px;
+    height: 60px;
+    color: #000;
+}
+
+.footer_contents p{
+    margin-left: 30px;
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}

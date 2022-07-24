@@ -1,0 +1,287 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{ overflow-y:scroll;}
+
+
+header{
+    width: 100%;
+    height: 120px;
+    background:linear-gradient(rgb(177, 174, 174,0.1) 120px,
+     rgb(177, 174, 174,0.1) 120px, rgba(177, 174, 174,0.1));    
+     transition:all 0.8s;
+     position:absolute;
+     left:0; right:0;
+     top:0;
+     overflow: hidden;
+     z-index: 2;
+     
+}
+
+header:hover{
+    height: 350px;
+    background:linear-gradient(rgba(125, 123, 123, 0.8) 120px,
+     rgba(156, 155, 155, 0.8) 120px, rgba(173, 171, 171, 0.8)); 
+}
+
+#User_header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 500px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.User_header_List{
+    cursor: pointer;
+    margin-right: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    line-height: 40px;
+}
+
+.User_header_List a,span{
+    font-size: 16px;
+    color: #fff;
+}
+
+.User_header_List a:hover{
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.mainMenu_List{
+    display: flex;
+}
+
+#logo{
+    cursor: pointer;
+    opacity: 1;
+    z-index: 6;
+    margin-left: 200px;
+    width:250px;
+    height: 80px;
+    
+}
+
+nav{
+    /* overflow: hidden; */
+    margin-left: 100px;
+    z-index: 6;
+    display: flex;   
+    width: 1000px;
+    /* margin: 0 auto; */
+}
+
+.mainMenu{
+    position: relative;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.mainMenu > li{
+    line-height: 70px;
+    text-align: center;
+    width: 250px;
+}
+
+.mainMenu span{
+    cursor: pointer;
+    font-size: 26px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 80px;
+}
+
+.mainMenu span:hover{
+    text-decoration: underline;
+}
+
+.subMenu{
+    /* background-color: aqua; */
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+}
+
+.subMenu li{
+    z-index: 3;
+    white-space:nowrap;
+    width: 250px;
+    line-height: 30px;
+}
+
+.subMenu li a{
+    /* z-index: 11; */
+    text-align: center;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.subMenu li a:hover{
+    text-decoration: underline;
+}
+
+/* mainimg */
+
+#main_img{
+    background-color: #0a1927;
+}
+
+#main_img img{
+    position: relative;
+    width: 100%;
+    height:100vh ;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.search_bar{
+    display: flex;
+    z-index: 2;
+    position: absolute;
+    top:40% ;
+    left: 33%;
+    width: 750px;
+    height: 60px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.searchInput{
+    margin: 0px 20px 20px 20px;
+    padding: 20px;
+    border: none;
+    width: 550px;
+    height: 60px;
+    border-radius: 25px;
+    font-size: 24px;
+    outline: 0;
+}
+
+.btn_list{
+    margin:10px 0 0 10px ;
+    display: flex;
+}
+
+.search_btn{
+    outline: 0;
+    border: 0;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: rgb(80, 80, 205);
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.detail_search_btn{
+    outline: 0;
+    border: 0;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: rgb(35, 136, 220);
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.select_job{
+    margin-left: 10px;
+    border: 0;
+    border-radius: 10px;
+    padding: 2px;
+    outline: none;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(199, 233, 234);
+    font-size: 18px;
+}
+
+
+/* footer */
+
+footer{
+    position: absolute;
+    top: 840px;
+    width: 100%;
+    height: 120px;
+    background-color: #ccc;
+    opacity: 0.6;
+    z-index: 2;
+    display: flex;
+}
+
+.footer_in{
+    display: flex;
+    width: 100%;
+    height: 120px;
+    padding-left: 100px;
+}
+
+.footer_buttons{
+    display: flex;
+}
+
+.footer_buttons button{
+    margin-left: 40px;
+    border: 0;
+    outline: none;
+    width: 80px;
+    height: 120px;
+    text-align: center;
+    background-color: #ccc;
+    
+}
+
+.footer_buttons span{
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #000;
+}
+
+.footer_contents{
+    padding: 20px 0px 10px 50px;
+    display: flex;
+    width: 1200px;
+    height: 120px;
+}
+
+.footer_logo{
+    width: 150px;
+    height: 60px;
+    color: #000;
+}
+
+.footer_contents span{
+    font-size: 16px;
+    color: rgb(36, 34, 34);
+    line-height: 40px;
+}
+
+.footer_contents p{
+    margin-left: 30px;
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html  lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<th:block th:replace="/all/head"></th:block>
+    <title>찾아오시는길</title>
+    <link rel="stylesheet" href="/static/css/Guide/direction.css">
+</head>
+<body>
+    <div id="container">
+        <!--상단-->
+ <th:block th:replace="/all/header"></th:block>  
+        
+        <div class="main_img">
+            <img src="/static/images/wood-2045379_1920.jpg" alt="">
+            <div class="menu">
+                <h2>타이틀</h2>
+            </div>
+        </div>
+        <!--메인-->
+        <section id="main">
+            <div class="main_all">
+                <div class="main_h">
+                    <div class="select_bar">
+                        <ul>
+                            <li><a href="/giude/libDirection"><span>도서관안내</span></a></li>
+                            <li><a href="/giude/libDirection" class="focus">찾아오시는길</a></li>
+                            <li><a href="/guide/facilityStatus">시설현황</a></li>
+                            <li><a href="/guide/infoUse">이용안내</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main_m">
+                    <div class="top_box">
+                        <div class="top_bar">
+                            <ul>
+                                <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+                                <li>><span>도서관안내</span></li>
+                                <li>>><span>찾아오시는길</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="dirction_box">
+                            <h2><img src="/static/images/Title_logo.png" alt=""> 찾아오시는길</h2>
+                            <div class="Map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.4190173583047!2d128.98271175099!3d35.171107565289425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568c138e2089533%3A0x56cda35c051956df!2z67aA7IKw64-E7ISc6rSA!5e0!3m2!1sko!2skr!4v1655772411168!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--하단-->
+ <th:block th:replace="/all/footer"></th:block>  
+    </div>
+</body>
+</html>

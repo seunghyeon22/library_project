@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html  lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="/all/head"></th:block>
+    <title>mainpage</title>
+    <link rel="stylesheet" href="/static/css/mainPage.css">
+</head>
+<body>
+    <div id="container"> 
+         <!--header  -->
+    <th:block th:replace="/all/header"></th:block>  
+    <!-- mainimg -->
+    <div class="main_img_content">
+        <div id="main_img">
+            <img src="/static/images/fmtmblr.jpeg" alt="">
+               
+            </div><!--main_img-->
+        </div><!--main_img_content-->
+
+    <!-- footer -->
+    <footer>
+        <div class="footer_in">
+            <div class="footer_buttons">
+                <button type="button"><span>이용약관</span></button>
+                <button type="button"><span>개인정보<br>처리방침</span></button>
+                <button type="button"><span>저작권<br>보호정책</span></button>
+            </div>
+        <div class="footer_contents">
+            <h2 id="footer_logo">
+                <img src="/static/images/footer_logo.png">
+            </h2>
+            <p><span>(12345) 부산광역시 사상구 사상로310번길 33(덕포동) 전화 051-123-4567 / 팩스 010-000-0000</span>
+                <br>
+                Copyright © Korea Metropolitan Library, All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html  lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<th:block th:replace="/all/head"></th:block>
+    <title>이용안내</title>
+    <link rel="stylesheet" href="/static/css/Guide/Info_use.css">
+</head>
+<body>
+    <div id="container">
+        <!--상단-->
+ <th:block th:replace="/all/header"></th:block> 
+        
+        <div class="main_img">
+            <img src="/static/images/wood-2045379_1920.jpg" alt="">
+            <div class="menu">
+                <h2>타이틀</h2>
+            </div>
+        </div>
+        <!--메인-->
+        <section id="main">
+            <div class="main_all">
+                <div class="main_h">
+                    <div class="select_bar">
+                        <ul>
+                            <li><a href="/giude/libDirection"><span>도서관안내</span></a></li>
+                            <li><a href="/giude/libDirection">찾아오시는길</a></li>
+                            <li><a href="/guide/facilityStatus">시설현황</a></li>
+                            <li><a href="/guide/infoUse" class="focus">이용안내</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main_m">
+                    <div class="top_box">
+                        <div class="top_bar">
+                            <ul>
+                                <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+                                <li>><span>도서관안내</span></li>
+                                <li>>><span>이용안내</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <h2><img src="/static/images/Title_logo.png" alt=""> 운영시간 &#183; 휴관일</h2>
+                        <div class="Use_time">
+                            <h3>도서관 이용시간</h3>
+                            <p>- 09:00~22:00(화~금 야간개관), 09:00~18:00(토, 일)</p>
+                        </div>
+                        <div class="Room_useTime">
+                            <h3><img src="/static/images/Title_logo.png" alt=""> 자료실별 이용시간</h3>
+                            <table>
+                                <tr>
+                                    <th rowspan="2">위치</th>
+                                    <th rowspan="2">실명칭</th>
+                                    <th colspan="2">이용시간</th>
+                                </tr>
+                                <tr>
+                                    <th>화~금요일</th>
+                                    <th>토~일요일</th>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" bgcolor="#ccc">3층</td>
+                                    <td>책누리터</td>
+                                    <td>09:00~22:00</td>
+                                    <td rowspan="5"  class="td">09:00~18:00</td>
+                                </tr>
+                                <tr>
+                                    <td>부산애뜰</td>
+                                    <td>09:00~18:00</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" bgcolor="lightgrey">2층</td>
+                                    <td>책마루</td>
+                                    <td>09:00~22:00</td>
+                                </tr>
+                                <tr>
+                                    <td>디지털존, 전시실</td>
+                                    <td>09:00~18:00</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" bgcolor="lightgrey">1층</td>
+                                    <td>꿈뜨락 어린이실</td>
+                                    <td>09:00~20:00</td>
+                                </tr>
+                                <tr>
+                                    <td>도서반납실</td>
+                                    <td colspan="2" class="td">24시간 이용 가능</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" bgcolor="lightgrey">지하1층</td>
+                                    <td>모들락 극장, 혜윰마당</td>
+                                    <td colspan="2" class="td">09:00~22:00<br>
+                                        오전, 오후, 야간, 1일로 구분하여 대관</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="holiday">
+                            <h3><img src="/static/images/Title_logo.png" alt=""> 휴관일</h3>
+                            <p>- 매주 월요일, 법정공휴일, 임시휴관일(도서관장이 필요하다고 인정하는 날)
+                            </p>
+                            <div class="manager">
+                                <b><span>담당부서</span> : 정보서비스팀</b>
+                                <b><span>담당자</span> : 박승준</b>
+                                <b><span>전화번호</span> : 051-310-5441</b>
+                                <b><span>최종수정일</span> : 2022.05.06</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--하단-->
+<th:block th:replace="/all/footer"></th:block>  
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.library.project.domain.comment.CommentRepository">
+	
+	<select id="CommentListByPage" resultType="com.library.project.domain.comment.CommentMst">
+		select
+			*
+		from
+			comment_mst
+		where
+			boardcode = #{boardcode}
+		order by
+			create_date desc
+		limit #{index}, 10;
+			
+	</select>
+	
+	<insert id="insertComment" parameterType="com.library.project.domain.comment.CommentMst">
+		insert into
+			comment_mst
+		values(
+			0,
+			#{boardcode},
+			#{comment_username},
+			#{comment_contents},
+			now(),
+			now()
+		)
+	</insert>
+	
+	<select id="getBoardByBoardcode" parameterType="Integer" resultType="com.library.project.domain.comment.CommentMst">
+		select
+			*,
+			(select count(boardcode) from comment_mst where boardcode = #{boardcode}) as total_count
+		from
+			comment_mst
+		where
+			boardcode = #{boardcode}
+		order by
+			create_date desc
+		limit #{page}, 5;
+	</select>
+	
+	<delete id="deleteComment" parameterType="Integer">
+		delete
+		from
+			comment_mst
+		where
+			qnacode = #{qnacode}
+	</delete>
+	
+</mapper>

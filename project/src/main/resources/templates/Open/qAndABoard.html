@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="/all/head"></th:block>
+    <title>Q&A</title>
+    <link rel="stylesheet" href="/static/css/Open/qAndABoard.css">
+    <script src="https://kit.fontawesome.com/da888d3936.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        <!--상단-->
+<th:block th:replace="/all/header"></th:block> 
+        
+<div class="main_img">
+    <img src="/static/images/wood-2045379_1920.jpg" alt="">
+    <div class="menu">
+        <h2>열린공간</h2>
+    </div>
+</div>
+<!--메인-->
+<section id="main">
+    <div class="main_h">
+        <div class="select_bar">
+            <ul>
+                <li><a href="/book/notice"><span>공지사항</span></a></li>
+                <li><a href="/book/qAndA" class="focus">Q&A</a></li>
+                <li><a href="/book/bulletin" >자유게시판</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main_m">
+        <div class="top_box">
+            <div class="top_bar">
+                <ul>
+                    <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+                    <li>><span>열린공간</span></li>
+                    <li>>><span>Q&A</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="board_list_wrap">
+            <form action="">
+                <div class="board_list_title">
+                    <h2>Q&A</h2>
+                </div>
+                <div class="board_view_wrap" >
+                    <div class="board_view">
+                       
+                    </div>
+                    <div class="bt_wrap">
+                        <button type="button" onclick="location.href = '/book/qAndA/'">목록</button>
+                    </div>
+                    <div class="comm_contant">
+                        <div class="comm_box">
+                            <textarea class="comment_textarea"></textarea>
+                    		<button type="button" class="submit_btn">작성</button>
+                        </div>
+                        <div class="comm">
+                            <table>
+                                
+                            </table>
+                        </div>
+                        <div class="paging">
+                        	
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+        <!--하단-->
+<th:block th:replace="/all/footer"></th:block>  
+    </div>
+    <script type="text/javascript" src="/static/js/board/qnaboard.js"></script>
+    <script type="text/javascript" src="/static/js/board/qnaComment.js"></script>
+</body>
+</html>

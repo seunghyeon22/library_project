@@ -1,0 +1,148 @@
+#main .select_bar .focus{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    display: none;
+}
+
+ul {
+    border-collapse: none;
+    text-align: left;
+}
+
+.board_list_wrap {
+    float: right;
+    width: 950px;
+    height: 900px;
+}
+
+.board_list_sub {
+    display: flex;
+    justify-content: right;
+}
+
+.box-table {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid rgb(33, 33, 33);
+}
+
+.board_btn {
+    margin-top: 20px;
+    padding-left: 400px;
+}
+
+.board_btn button {
+    width: 100px;
+    height: 50px;
+    border: 0px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(54, 86, 156);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.board_list {
+    margin-top: 30px;
+    border-top: 3px solid rgb(51, 177, 93);
+    width: 100%;
+}
+
+.board_list td {
+    width: 80px;
+    height: 45px;
+    border-right: 2px solid #ccc;
+}
+
+.board_list tr {
+    border: 2px solid #ccc;
+}
+
+.board_list tr:last-child {
+    height: 400px;
+}
+
+.board_list th,
+.board_list td {
+    padding: 10px 20px;
+    font-size: 14px;
+
+}
+
+.board_list .board_title{
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    border: 0;
+}
+
+.board_list .board_name{
+    width: 50%;
+    height: 40px;
+    padding-left: 10px;
+    line-height: 40px;
+    font-size: 18px;
+    border: 0;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.border {
+	border: none;
+}
+
+
+textarea {
+    padding: 20px 15px;
+    width: 785px;
+    height: 428px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.board_list_title {
+    margin-top: 30px;
+    border-bottom: 1px dashed #ccc;
+    width: 100%;
+    height: 60px;
+}
+
+.board_list_title h2 {
+    font-size : 30px;
+}
+
+footer{
+    position: absolute;
+    top: 1400px;
+}

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.project.domain.book.BookRepository">
+	<resultMap type="hashMap" id="rentalMap">
+		<id column="user_count" property="user_count" />
+		<id column="rental_status" property="rental_status" />
+
+	</resultMap>
+	<select id="bookcodeCheckByBookcode"
+		parameterType="com.library.project.web.dto.book.BookcodeCheckDto"
+		resultType="com.library.project.domain.book.Book">
+		select
+			*
+		from
+			book_mst
+		where
+			bookcode=#{bookcode};
+	</select>
+
+	<insert id="bookInsert" parameterType="com.library.project.domain.book.Book">
+		insert into
+			book_mst
+		values(
+			#{bookcode},
+			#{book_file_img},
+			#{call_sign},
+			#{bookname},
+			#{author},
+			#{publisher},
+			#{year_of_publication},
+			#{summary},
+			#{rentals},
+			now(),
+			now()
+		)
+	</insert>
+	<update id="updateBook" parameterType="com.library.project.domain.book.Book">
+		update
+			book_mst
+		set
+			<if test="book_file_img != null">
+				book_file_img=#{book_file_img},
+			</if>
+			call_sign=#{call_sign},
+			bookname=#{bookname},
+			author=#{author},
+			publisher=#{publisher},
+			year_of_publication=#{year_of_publication},
+			summary=#{summary},
+			update_date=now()
+		where
+			bookcode=#{bookcode};
+	</update>
+	<delete id="deleteBook" parameterType="String">
+		delete from
+			book_mst
+		where
+			bookcode=#{bookcode}
+	</delete>
+
+	<insert id="rentalBookInsert"
+		parameterType="com.library.project.domain.book.RentalBook">
+		insert into
+			rental_book
+		values(
+			0,
+			#{usercode},
+			#{bookcode},
+			#{rental_status},
+			now(),
+			(select DATE_ADD(now(),INTERVAL 7 DAY))
+		)
+	</insert>
+	<update id="returnBookUpdate"
+		parameterType="com.library.project.domain.book.RentalBook">
+		update
+			rental_book
+		set
+			rental_status =#{rental_status},
+			return_date=now()
+		where
+			rental_code=#{rental_code}
+	</update>
+	<select id="getBookList" parameterType="Integer"
+		resultType="com.library.project.domain.book.Book">
+		select
+			bookcode,
+			bookname,
+			author,
+			publisher,
+			(select count(*) from book_mst) as total_count
+		from
+			book_mst
+		limit #{page}, 20
+	</select>
+
+	<select id="searchBook"
+		parameterType="com.library.project.domain.book.SearchBook"
+		resultType="com.library.project.domain.book.Book">
+		select
+			*,
+			(select
+				count(*)
+			from
+				book_mst
+			where
+			<choose>
+				<when test='select == "bookname"'>
+					bookname like concat('%',#{keyword},'%')
+				</when>
+				<when test='select == "author"'>
+					author like concat('%',#{keyword},'%')
+				</when>
+				<otherwise>
+					bookname like concat('%',#{keyword},'%')
+					or author like concat('%',#{keyword},'%')
+				</otherwise>
+			</choose>
+			) as total_count
+		from
+			book_mst
+		where
+			<choose>
+				<when test='select == "bookname"'>
+					bookname like concat('%',#{keyword},'%')
+				</when>
+				<when test='select == "author"'>
+					author like concat('%',#{keyword},'%')
+				</when>
+				<otherwise>
+					bookname like concat('%',#{keyword},'%')
+					or author like concat('%',#{keyword},'%')
+				</otherwise>
+			</choose>
+		limit #{page}, #{contentCount}
+	</select>
+	<select id="searchBestBook" parameterType="com.library.project.domain.book.SearchBook" resultType="com.library.project.domain.book.Book">
+		select
+			*,
+			(select
+				count(*)
+			from
+				book_mst
+			where
+			<choose>
+				<when test='select == "bookname"'>
+					bookname like concat('%',#{keyword},'%')
+				</when>
+				<when test='select == "author"'>
+					author like concat('%',#{keyword},'%')
+				</when>
+				<otherwise>
+					bookname like concat('%',#{keyword},'%')
+					or author like concat('%',#{keyword},'%')
+				</otherwise>
+			</choose>
+			) as total_count
+		from
+			book_mst
+		where
+			<choose>
+				<when test='select == "bookname"'>
+					bookname like concat('%',#{keyword},'%')
+				</when>
+				<when test='select == "author"'>
+					author like concat('%',#{keyword},'%')
+				</when>
+				<otherwise>
+					bookname like concat('%',#{keyword},'%')
+					or author like concat('%',#{keyword},'%')
+				</otherwise>
+			</choose>
+		order by
+			rentals desc	
+		limit #{page}, #{contentCount}
+	</select>
+	
+
+	<select id="newBook" parameterType="Integer"
+		resultType="com.library.project.domain.book.Book">
+		select
+			book_file_img,
+			bookname,
+			bookcode,
+			call_sign,
+			author,
+			publisher,
+			year_of_publication,
+			create_date,
+			(select count(*) from book_mst where create_date>DATE_SUB(NOW(), INTERVAL 30
+			day) ) as total_count
+		from
+			book_mst
+		where
+			create_date>DATE_SUB(NOW(), INTERVAL 30 day)
+		order by
+			create_date desc
+		LIMIT #{page}, 10
+
+	</select>
+
+	<update id="extensionBook"
+		parameterType="com.library.project.domain.book.RentalBook">
+		update
+			rental_book
+		set
+			return_date = DATE_ADD(return_date,INTERVAL 3 DAY)
+		where
+			rental_code =#{rental_code}
+	</update>
+
+	<select id="rentalOverlep"
+		parameterType="com.library.project.domain.book.RentalBook"
+		resultMap="rentalMap">
+		SELECT
+			count(usercode) as user_count,
+			(select
+			count(rental_status)
+			from
+				rental_book
+			where
+				bookcode=#{bookcode}
+				and rental_status=1
+			) AS rental_status
+		from
+			rental_book
+		where
+			usercode=#{usercode}
+			and rental_status=1;
+
+	</select>
+	<select id="getRentalBook" parameterType="Integer"
+		resultType="com.library.project.domain.book.RentalBook">
+		select
+			*
+		from
+			rental_book
+		where
+			rental_code =#{rental_code}
+	</select>
+
+	<select id="getBookAndRental" parameterType="String" resultType="com.library.project.domain.book.BookAndRental">
+		select
+			bm.book_file_img,
+			bm.bookcode,
+			bm.call_sign,
+			bm.bookname,
+			bm.author,
+			bm.publisher,
+			bm.year_of_publication,
+			bm.summary,
+			bm.rentals,
+			rb.rental_code,
+			rb.usercode,
+			rb.rental_status,
+			rb.rental_date,
+			rb.return_date
+		from
+			book_mst bm
+			left outer join (select
+								row_number() over(partition by bookcode order by rental_date DESC) AS num,
+								rental_code,
+								bookcode,
+								usercode,
+								rental_status,
+								rental_date,
+								return_date
+							from
+								rental_book) rb ON(rb.bookcode = bm.bookcode AND rb.num = 1)
+		where
+			bm.bookcode = #{bookcode}
+	</select>	
+</mapper>

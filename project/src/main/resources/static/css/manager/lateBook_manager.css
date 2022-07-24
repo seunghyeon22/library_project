@@ -1,0 +1,115 @@
+#main .select_bar .focus{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.lateBook_Title{
+    width: 400px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px; 
+     
+}
+
+.lateBook_Title h2{
+    font-size: 40px;
+    line-height: 80px;
+    font-weight: 600;
+    color: rgb(53, 96, 237);
+    border-bottom: 3px solid #000; 
+}
+
+.lateBook_contents{
+    margin-top: 50px;
+    width: 920px;
+    height: 900px;
+}
+
+.lateBook_List{
+    margin:  20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 900px;
+}
+
+.lateBook_List h2{
+    font-size: 22px;
+    line-height: 60px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.lateBook_table{
+    border: 2px solid #000;
+    border-bottom: 0;
+    border-right: 0;
+    border-collapse: collapse;
+}
+
+.lateBook_table th{
+    background-color: skyblue;
+    font-weight: 900;
+}
+
+.lateBook_table span{
+    color: rgb(210, 67, 67);
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.lateBook_table td,th{
+    text-align: center;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.lateBook_table td:nth-child(1){
+    font-size: 15px;
+    font-weight: 900;
+    width: 100px;
+}
+
+.lateBook_table td:nth-child(2){
+    width: 300px;
+}
+
+.lateBook_table td:nth-child(3){
+    width: 200px;
+}
+
+.lateBook_table td:nth-child(4){
+    width: 200px;
+}
+
+.lateBook_table td:nth-child(5){
+    width: 170px;
+}
+
+.lateBook_table td:nth-child(6){
+    width: 150px;
+}
+
+.lateBook_table td:last-child{
+    width: 150px;
+}
+
+#main .selet_bar li:nth-child(1) a {
+    color:  blue;
+}
+
+footer{
+    position: absolute;
+    top: 1250px;
+}
+
+

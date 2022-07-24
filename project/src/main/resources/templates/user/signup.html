@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html  lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<th:block th:replace="/all/head"></th:block>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="/static/css/user/signup.css">
+</head>
+<body>
+    <div id="container">
+
+        <!-- 상단 -->
+ <th:block th:replace="/all/header"></th:block> 
+        
+        <div class="main_img">
+            <img src="/static/images/wood-2045379_1920.jpg" alt="">
+            <div class="menu">
+                <h2>회원</h2>
+            </div>
+        </div>
+
+        <!-- 메인 -->
+        <section id="main">
+            <div class="main_all">
+                <div class="select_bar"> <!--280 640-->
+                    <ul>
+                        <li><a href="/auth/login"><span>로그인</span></a></li>
+                        <li><a href="/auth/signup" class="focus">회원가입</a></li>
+                        <li><a href="/auth/searchId">아이디찾기</a></li>
+                        <li><a href="/auth/searchPassword">비밀번호찾기</a></li>
+                    </ul>
+                </div>
+                <div class="main_m">
+                    <div class="top_box">
+                        <div class="top_bar">
+                            <ul>
+                                <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+                                <li>><span>로그인</span></li>
+                                <li>>><span>회원가입</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main_title"> <!-- 983 67-->
+                        <h3>회원가입</h3>
+                    </div>
+                        <div class="main_step_p">
+                            <p>(*)항목은 필수 입력값입니다.</p>
+                        </div>
+                    <div class="main_info">
+                        <table>
+                            <tr class="tr1">
+                                <th class="first_th">* 아이디</th>
+                                <td class="first_tr">
+                                    <div class="id_input">
+                                        <input type="text" class="input_box">
+                                        <button type="button" class="usernameCheckBtn">중복확인</button>
+                                    </div>
+                                    <div class="id_input_text">
+                                        <p>* 아이디는 영문 또는 숫자만 가능하며 6자 이상 20자 이내만 가능합니다.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tr2">
+                                <th>* 비밀번호</th>
+                                <td>
+                                    <div class="pw_input">
+                                        <input type="password" class="input_box">
+                                    </div>
+                                    <div class="pw_input_text">
+                                        <p>* 비밀번호는 영문(대소문자구분), 숫자, 특수문자(!@#$%^&*만 허용)를 혼용하여 9~20자이내</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tr3">
+                                <th>* 비밀번호 확인</th>
+                                <td class="re_pw_input"><input type="password" class="input_box"></td>
+                            </tr>
+                            <tr class="tr4">
+                                <th>* 이름</th>
+                                <td class="name_input"><input type="text" class="input_box"></td>
+                            </tr>
+                            <tr class="tr5">
+                                <th>* 성별</th>
+                                <td class="gender_input">
+                                    <span>남</span><input type="radio" name="gender" checked="checked" value= 0 class="input_box">
+                                    <span>여</span><input type="radio" name="gender" value= 1 class="input_box">
+                                </td>
+                            </tr>
+                            <tr class="tr6">
+                                <th>* 생년월일</th>
+                                <td class="year_input"><input type="date" class="input_box"></td>
+                            </tr>
+                            <tr class="tr7">
+                                <th>* 휴대폰번호</th>
+                                <td>
+                                    <div class="tel_input">
+                                        <input type="tel" class="tel input_box">
+                                    </div>
+                                    <div class="tel_input_text">
+                                        <p>
+                                        * 010-0000-0000 형식으로 넣어주세요.<br>
+                                        * 도서관련 알림 및 행사 안내를 받으실 수 있습니다.
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tr8">
+                                <th>* 주소</th>
+                                <td>
+                                    <div class="address_input">
+                                        <input type="text" id="sample6_postcode" class="input_box" placeholder="우편번호" readonly>
+                                        <button type="button" class="addressBtn">우편번호 찾기</button>
+                                    </div>
+                                    <div class="adress_input2">
+                                        <input type="text" id="sample6_address" class="input_box" placeholder="주소" readonly>
+                                        <input type="text" id="sample6_detailAddress" class="input_box" placeholder="상세주소">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tr9">
+                                <th>이메일</th>
+                                <td>
+                                    <div class="email_input">
+                                        <input type="text" class="input_mbox">
+                                        <span>@</span>
+                                        <input type="text" class="input_mbox">
+                                        <select name="selet" id="email_select" class="input_box_email">
+                                            <option value="write">--직접입력--</option>
+                                            <option value="naver">naver.com</option>
+                                            <option value="daum">hanmail.net</option>
+                                            <option value="kakao">kakao.com</option>
+                                            <option value="gmail">gmail.com</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="btn">
+                            <button class="btn_ok">회원가입</button>
+                            <button class="btn_no">취소</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 하단 -->
+<th:block th:replace="/all/footer"></th:block> 
+
+    </div>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script type="text/javascript" src="/static/js/user/signup.js"></script>
+</body>
+</html>

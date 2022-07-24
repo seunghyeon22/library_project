@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.library.project.domain.comment.QnACommentRepository">
+ 
+ 	<select id="qnACommentList" resultType="com.library.project.domain.comment.QnACommentMst">
+ 		select
+ 			*
+ 		from
+ 			qnacomment_mst
+ 	</select>
+ 	
+ 	<select id="qnACommentListByPage" resultType="com.library.project.domain.comment.QnACommentMst">
+		select
+			*
+		from
+			qnacomment_mst
+		order by
+			qna_code desc
+		limit #{index}, 10;
+			
+	</select>
+ 	
+ 	<insert id="insertQnAComment" parameterType="com.library.project.domain.comment.QnACommentMst">
+ 		insert into
+ 			qnacomment_mst
+ 		values(
+ 			0,
+ 			#{qna_code},
+ 			#{qnacomment_username},
+ 			#{qnacomment_contents},
+ 			now(),
+ 			now()
+ 		)
+ 	</insert>
+ 	
+ 	<select id="getQnABoardByBoardcode" parameterType="Integer" resultType="com.library.project.domain.comment.QnACommentMst">
+		select
+			*,
+			(select count(*) from qnacomment_mst where qna_code = #{qna_code}) as total_count
+		from
+			qnacomment_mst
+		where
+			qna_code = #{qna_code}
+		order by
+			create_date desc
+		limit #{page}, 5;
+	</select>
+ 	
+ 	<delete id="deleteQnAComment" parameterType="Integer">
+ 		delete
+ 		from
+ 			qnacomment_mst
+ 		where
+ 			qnacomment_code = #{qnacomment_code}
+ 	</delete>
+ </mapper>

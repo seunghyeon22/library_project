@@ -1,0 +1,261 @@
+#main .select_bar .focus{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    height: 80px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+caption {
+    display: none;
+}
+
+.board_list_wrap {
+	display : flex;
+	flex-direction: column;
+	border-collapse: collapse;
+    width: 950px;
+    height: 800px;
+}
+
+.board_list_title {
+	display : flex;
+    margin-top: 30px;
+    border-bottom: 1px dashed #ccc;
+    width: 100%;
+    height: 60px;
+}
+
+.board_list_title h2 {
+    font-size : 30px;
+}
+
+.board_list_sub {
+    display: flex;
+    justify-content: right;
+    height: 40px;
+    padding: 10px;
+    padding-right: 0px;
+    line-height: 20px;
+    margin-bottom: 20px;
+
+}
+
+.bt_wrap {
+    display: flex;
+    justify-content: right;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.bt_wrap button {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    width: 90px;
+    height: 40px;
+    background-color: #3671c8;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.board_view_wrap {
+	display: flex;
+	flex-direction: column;
+}
+
+.board_view {
+	display: flex;
+	flex-direction: column;
+    width: 100%;
+    border-top: 3px solid #000;
+    border-bottom: 1px solid #000;
+    margin-top: 60px;
+}
+
+.board_view .title {
+    padding: 20px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: initial;
+    font-weight: bold;
+
+}
+
+.board_view .info {
+    padding: 15px;
+    border-bottom: 1px solid #999;
+}
+
+.board_view .info dl  {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.board_view .info dl:first-child {
+    padding-left: 0;
+}
+
+.board_view .info dl::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: block;
+    width: 1px;
+    height: 20px;
+    background: #ddd;
+}
+
+.board_view .info dl:first-child:before {
+    display: none;
+}
+
+.board_view .info dl dt,
+.board_view .info dl dd {
+    display: inline-block; 
+}
+
+.board_view .info dl dd {
+    margin-left: 10px;
+    color: #777;
+}
+
+.board_view .cont {
+    padding: 15px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+    line-height: 160%; 
+    width: 100%;
+    height: 450px;
+    resize: both;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: start;
+}
+
+.comm_contant {
+    margin-top: 50px;
+    width: 950px;
+}
+
+.comm_box {
+    display: flex;
+    width: 950px;
+    height: 80px;
+}
+
+.comm_box textarea {
+    margin-top: 4px;
+    margin-left: 5px;
+    padding: 0 5px;
+    width: 750px;
+    height: 70px;
+    resize: none;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+.comm_box button {
+    margin-top: 5px;
+    margin-left: 30px;
+    margin-right: 5px;
+    border: 0px;
+    background: rgb(55, 216, 208);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    width: 163px;
+    height: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.name {
+    text-align: center;
+}
+
+.comm{
+    width: 100%;
+}
+
+
+.comm tr {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 40px;
+    height: 60px;
+}
+
+.comm td:nth-child(1){
+    font-weight: bold;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    width: 100px;
+    height: 30px;
+    background-color: #eee;
+}
+
+.comm td:nth-child(2) {
+    width: 750px;
+    padding-left: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.comm td:nth-child(3) {
+    text-align: center;
+    width: 80px;
+    font-size: 11px;
+}
+
+.paging ul {
+	display: flex;
+	border-top: 1px solid #000; 
+	border-bottom: 1px solid #000; 
+}
+
+.paging li {
+	border-left: 1px solid #000; 
+}
+
+.board_list_wrap .paging {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.board_list_wrap .paging div {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.board_list_wrap .paging div.next_btn {
+    border: 1px solid #000;
+    background: #eee;
+}
+
+.board_list_wrap .paging div.nums {
+	border: 1px solid #000;
+}
+
+footer{
+    position: absolute;
+    top: 1250px;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<th:block th:replace="/all/head"></th:block>
+    <title>시설현황</title>
+    <link rel="stylesheet" href="/static/css/Guide/Facility_status.css">
+</head>
+<body>
+    <div id="container">
+        <!--상단-->
+ <th:block th:replace="/all/header"></th:block>   
+        
+        <div class="main_img">
+            <img src="/static/images/wood-2045379_1920.jpg" alt="">
+            <div class="menu">
+                <h2>타이틀</h2>
+            </div>
+        </div>
+        <!--메인-->
+        <section id="main">
+            <div class="main_all">
+                <div class="main_h">
+                    <div class="select_bar">
+                        <ul>
+                            <li><a href="/giude/libDirection"><span>도서관안내</span></a></li>
+                            <li><a href="/giude/libDirection">찾아오시는길</a></li>
+                            <li><a href="/guide/facilityStatus" class="focus">시설현황</a></li>
+                            <li><a href="/guide/infoUse">이용안내</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main_m">
+                    <div class="top_box">
+                        <div class="top_bar">
+                            <ul>
+                                <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+                                <li>><span>도서관안내</span></li>
+                                <li>>><span>시설현황</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <h3><img src="/static/images/Title_logo.png" alt=""> 시설현황</h3>
+                        <div class="facility_Status">
+                            <button>위치</button><b>(46949) 부산광역시 사상구 사상로310번길 33(덕포동)</b>
+                            <button>규모</button><b>부지 10,381㎡, 연면적 16,305.44㎡(지하2층, 지상4층)</b>
+                        </div>
+                        <h3><img src="/static/images/Title_logo.png" alt=""> 층별현황</h3>
+                        <div class="layer_Status">                
+                            <table>
+                                
+                                <tr>
+                                    <th>층</th>
+                                    <th>이름</th>
+                                    <th>세부공간</th>
+                                </tr>
+                                <!-- 4층 -->
+                                <tr>
+                                    <td bgcolor="#ccc">지상4층</td>
+                                    <td>옥상정원</td>
+                                    <td>카페테리아, 바람쉼터</td>
+                                </tr>
+                                <!-- 3층 -->
+                                <tr>
+                                    <td rowspan="4" bgcolor="#ccc">지상3층</td>
+                                    <td>책누리터</td>
+                                    <td>종합자료, 국외자료</td>
+                                </tr>
+                                <tr>
+                                    <td>부산애(愛)뜰</td>
+                                    <td>부산관련자료 및 행정자료 비치·전시</td>
+                                </tr>
+                                <tr>
+                                    <td>사무공간</td>
+                                    <td>관장실, 사무실, 보존서고</td>
+                                </tr>
+                                <tr>
+                                    <td> - </td>
+                                    <td>부산학당</td>
+                                </tr>
+                                <!-- 2층 -->
+                                <tr>
+                                    <td rowspan="3" bgcolor="#ccc">지상2층</td>
+                                    <td>책마루</td>
+                                    <td>문학·역사자료, 장애인존, 청소년존, 연속간행물존, 특화자료실</td>
+                                </tr>
+                                <tr>
+                                    <td>디지털존</td>
+                                    <td>PC석, 노트북석, 영화감상실</td>
+                                </tr>
+                                <tr>
+                                    <td> - </td>
+                                    <td>전시실, 소담방</td>
+                                </tr>
+                                <!-- 1층 -->
+                                <tr>
+                                    <td rowspan="2" bgcolor="#ccc">지상1층</td>
+                                    <td>꿈뜨락 어린이실</td>
+                                    <td>그림책나라, 창작나라, 이야기나라, 수유실</td>
+                                </tr>
+                                <tr>
+                                    <td>로비</td>
+                                    <td>안내데스크, 무인반납기</td>
+                                </tr>
+                                <!-- 지하1층 -->
+                                <tr>
+                                    <td rowspan="2" bgcolor="#ccc">지하1층</td>
+                                    <td>보존서고</td>
+                                    <td>보존서고, 귀중서고</td>
+                                </tr>
+                                <tr>
+                                    <td>개방형공간</td>
+                                    <td>모들락 극장, 혜윰마당(회의실), 휴게실</td>
+                                </tr>
+                                <!-- 지하2층 -->
+                                <tr>
+                                    <td bgcolor="#ccc">지하2층</td>
+                                    <td>보존서고</td>
+                                    <td>보존서고, 기계실</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--하단-->
+<th:block th:replace="/all/footer"></th:block>  
+    </div>
+</body>
+</html>

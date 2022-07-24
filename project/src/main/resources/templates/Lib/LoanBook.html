@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<th:block th:replace="/all/head"></th:block>
+    <title>대여도서</title>
+    <link rel="stylesheet" href="/static/css/LoanBook.css">
+</head>
+<body>
+    <div id="container">
+        <!--상단-->
+ 	<th:block th:replace="/all/header"></th:block>  
+        
+        <div class="main_img">
+            <img src="/static/images/wood-2045379_1920.jpg" alt="">
+            <div class="menu">
+                <h2>내서제</h2>
+            </div>
+        </div>
+        <!--메인-->
+        <section id="main">
+            <div class="main_all">
+                <div class="main_h">
+                    <div class="select_bar">
+                        <ul>
+                            <li><a href="/lib/loanbook"><span>도서목록</span></a></li>
+                            <li><a href="/lib/loanbook" class="focus">대여도서</a></li>
+                            <li><a href="/lib/latebook">연체도서</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main_m">
+                    <div class="top_box">
+                        <div class="top_bar">
+                            <ul>
+                                <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+                                <li>><span>내서제</span></li>
+                                <li>>><span>대여도서</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="loanBook_contents">
+                            <div class="loanBook_List">
+                                <h2><img src="/static/images/Title_logo.png" alt=""> 대여도서</h2>
+                                    <table class="loanBook_table">
+                                       
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--하단--><th:block th:replace="/all/footer"></th:block>  
+    </div>
+    <script type="text/javascript" src="/static/js/lib/loanBook.js"></script>
+</body>
+</html>

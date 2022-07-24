@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.library.project.domain.qnAboard.QnABoardRepository">
+
+	<select id="qnABoardList" resultType="com.library.project.domain.qnAboard.QnABoardMst">
+		select
+			*
+		from
+			qna_mst
+	</select>
+	
+	<select id="qnaBoardListByPage" resultType="com.library.project.domain.qnAboard.QnABoardMst">
+		select
+			qna_code,
+			qna_title,
+			qna_username,
+			qna_contents,
+			create_date,
+			update_date,
+			(select count(*) from qna_mst) as total_count
+		from
+			qna_mst
+		order by
+			qna_code desc
+		limit #{index}, 10;
+	</select>
+	
+	<select id="search"  parameterType= "com.library.project.domain.qnAboard.SearchQnABoard" resultType="com.library.project.domain.qnAboard.QnABoardMst">
+		select
+			*,
+			(select count(*) from qna_mst where qna_title like concat('%', #{keyword},'%')) as total_count
+		from
+			qna_mst
+		where
+			qna_title like concat('%', #{keyword},'%')
+		order by
+			qna_code desc
+		limit #{index}, 10;
+	</select>
+
+	<insert id="insertQnABoard" parameterType="com.library.project.domain.qnAboard.QnABoardMst"
+	useGeneratedKeys="true" keyProperty="qna_code">
+		insert into
+			qna_mst
+		values(
+			0,
+			#{qna_title},
+			#{qna_username},
+			#{qna_contents},
+			now(),
+			now()
+		)
+	</insert>
+	
+	<select id="getqnaBoardByQnACode" parameterType="Integer" resultType="com.library.project.domain.qnAboard.QnABoardMst">
+		select
+			*
+		from
+			qna_mst
+		where
+			qna_code = #{qna_code}
+	</select>
+	
+	<update id="updateQnABoard" parameterType="com.library.project.domain.qnAboard.QnABoardMst">
+		update
+			qna_mst
+		set
+			qna_title = #{qna_title},
+			qna_contents = #{qna_contents}
+		where
+			qna_code = #{qna_code}
+	</update>
+	
+	<delete id="deleteQnABoard" parameterType="Integer">
+		delete
+		from
+			qna_mst
+		where
+			qna_code = #{qna_code}
+		
+	</delete>
+</mapper>

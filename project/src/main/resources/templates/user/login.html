@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html  lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="/all/head"></th:block>
+    <title>로그인페이지</title>
+    <link rel="stylesheet" href="/static/css/user/login.css">
+</head>
+<body>
+    <div id="container">
+
+        <!-- 상단 -->
+ <th:block th:replace="/all/header"></th:block>  
+        <div class="main_img">
+            <img src="/static/images/wood-2045379_1920.jpg" alt="">
+            <div class="menu">
+                <h2>회원</h2>
+            </div>
+        </div>
+
+        <!-- 메인 -->
+        <form action="/auth/login" method="post">
+	        <section id="main">
+	            <div class="main_all">
+	                <div class="select_bar"> <!--280 640-->
+	                    <ul>
+	                        <li><a href="/auth/login"><span>로그인</span></a></li>
+	                        <li><a href="/auth/signup">회원가입</a></li>
+	                        <li><a href="/auth/searchId">아이디찾기</a></li>
+	                        <li><a href="/auth/searchPassword">비밀번호찾기</a></li>
+	                    </ul>
+	                </div>
+	                <div class="main_m">
+	                    <div class="top_box">
+	                        <div class="top_bar">
+	                            <ul>
+	                                <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+	                                <li>><span>로그인</span></li>
+	                                <li>>><span>로그인</span></li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                    <div class="main_title"> <!-- 983 67-->
+	                        <h3>로그인</h3>
+	                    </div>
+	                    <div class="login_all">
+	                        <div class="login_zone">
+	                            <div class="login">
+	                                <div class="login_input">
+	                                    <input type="text" name="username" placeholder="아이디">
+	                                    <input type="password" name="password" placeholder="비밀번호">
+	                                </div>
+	                                <div class="login_btn">
+	                                    <button type="button">로그인</button>
+	                                    <li><a href="/oauth2/authorization/naver"><img src="/static/images/naver.png" alt=""></a></li>
+	                                </div>
+	                            </div>
+	                            <div class="login_etc">
+	                                <ul>
+	                                    <li><a href="/auth/signup">회원가입</a></li>
+	                                    <li><a href="/auth/searchId">아이디찾기</a></li>
+	                                    <li><a href="/auth/searchPassword">비밀번호찾기</a></li>
+	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </section>
+		</form>
+        <!-- 하단 -->
+	<th:block th:replace="/all/footer"></th:block>  														
+    </div>
+    <script type="text/javascript" src="/static/js/user/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html  lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="/all/head"></th:block>
+    <title>공지사항게시판</title>
+    <link rel="stylesheet" href="/static/css/Open/noticeBoard.css">
+</head>
+<body>
+    <div id="container">
+        <!--상단-->
+<th:block th:replace="/all/header"></th:block> 
+        
+<div class="main_img">
+    <img src="/static/images/wood-2045379_1920.jpg" alt="">
+    <div class="menu">
+        <h2>열린공간</h2>
+    </div>
+</div>
+<!--메인-->
+<section id="main">
+    <div class="main_h">
+        <div class="select_bar">
+            <ul>
+                <li><a href="/book/notice"  class="focus"><span>공지사항</span></a></li>
+                <li><a href="/book/qAndA">Q&A</a></li>
+                <li><a href="/book/bulletin">자유게시판</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main_m">
+        <div class="top_box">
+            <div class="top_bar">
+                <ul>
+                    <li class="home_i"><img src="/static/images/home.png" alt=""></li>
+                    <li>><span>열린공간</span></li>
+                    <li>>><span>공지사항</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="board_list_wrap">
+            <form action="">
+                <div class="board_list_title">
+                    <h2>공지사항</h2>
+                </div>
+                <div class="board_view_wrap" >
+                    <div class="board_view">
+                        
+                    </div>
+                    <div class="bt_wrap">
+                        <button type="button" class="list_btn" onclick="location.href = '/book/notice/'">목록</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+        <!--하단-->
+<th:block th:replace="/all/footer"></th:block>  
+    </div>
+    <script type="text/javascript" src="/static/js/board/noticeboard.js"></script>
+</body>
+</html>

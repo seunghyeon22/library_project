@@ -1,0 +1,92 @@
+#main .select_bar .focus{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.contents{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px auto;
+    height: 1200px;
+    padding: 15px 0 0 15px;
+    
+}
+
+.contents h3{
+    font-size: 24px;
+    color: #000;
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px;
+}
+
+.facility_Status{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.facility_Status button{
+    margin-right: 10px;
+    width: 120px;
+    height: 30px;
+    color: rgb(41, 177, 231);
+    font-weight: 900;
+    font-size: 14px;
+    border-radius: 20px;
+    border: 2px solid rgb(39, 174, 227);
+}
+
+.facility_Status b{
+    line-height: 30px;
+    text-align: center;
+    margin-right: 40px;
+}
+
+.facility_Status b:last-child{
+    margin: 0;
+}
+
+.layer_Status{
+    width: 100%;
+    height: 700px;
+    /* background-color: aqua; */
+}
+
+.layer_Status table{
+    margin-top: 10px;
+    border: 2px solid #000;
+    border-collapse: collapse;
+}
+
+.layer_Status th{
+    background-color: skyblue;
+}
+
+.layer_Status td,th{
+    text-align: center;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.layer_Status table td:nth-child(1){
+    font-weight: 900;
+    width: 120px;
+}
+
+.layer_Status table td:nth-child(2){
+    width: 120px;
+}
+
+.layer_Status table td:nth-child(3){
+    width: 600px;
+}
+
+
+footer{
+    position: absolute;
+    top: 1400px;
+}

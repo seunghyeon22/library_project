@@ -1,0 +1,322 @@
+input {
+	cursor: pointer;
+}
+
+button {
+	cursor: pointer;
+}
+
+#main .select_bar .focus {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+
+#main .main_title {
+    box-sizing: border-box;
+    width: 1000px;
+    height: 67px;
+    padding: 10px 0 15px;
+    border-bottom: 2px dashed #ccc;
+}
+#main .main_title h3 {
+    font-size: 28px;
+}
+
+#main .main_step_p {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px
+}
+
+
+#main .main_info {
+    width: 1000px;
+    margin-top: 5px;
+}
+
+#main .main_info table {
+    width: 1000px;
+    border-top: 3px solid #ccc;
+    border-collapse: collapse;
+}
+
+#main .main_info th {
+    width: 200px;
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(246, 246, 246);
+}
+#main .main_info td {
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#main .main_info .first_th {
+    border-top: 1px solid #ccc;
+}
+
+#main .main_info .first_tr {
+    border-top: 1px solid #ccc;
+}
+
+#main .main_info .tr1 {
+    height: 100px;
+}
+
+#main .id_input {
+    display: flex;    
+}
+
+#main .id_input input {
+    box-sizing: border-box;
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#main .id_input button {
+    font-size: 15px;
+    font-weight: 900;
+    margin-left: 10px;
+}
+
+#main .id_input_text {
+    box-sizing: border-box;
+    width: 775px;
+    height: 35px;
+    padding-top: 8px;
+    margin: 10px 0 0 10px;
+    background-color: rgba(0, 128, 0, 0.459);
+}
+
+#main .id_input_text p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#main .main_info .tr2 {
+    height: 100px;
+}
+
+#main .pw_input input{
+    box-sizing: border-box;
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+}
+#main .pw_input_text {
+    box-sizing: border-box;
+    width: 775px;
+    height: 35px;
+    padding-top: 8px;
+    margin: 10px 0 0 10px;
+    background-color: rgba(0, 128, 0, 0.459);
+}
+
+#main .pw_input_text p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#main .main_info .tr3 {
+    height: 60px;
+}
+
+#main .re_pw_input input {
+    box-sizing: border-box;
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#main .main_info .tr4 {
+    height: 50px;
+}
+
+#main .name_input input {
+    box-sizing: border-box;
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#main .main_info .tr5 {
+    height: 50px;
+}
+
+#main .gender_input span {
+    font-size: 14px;
+    margin-left: 10px;
+    
+}
+#main .gender_input input {
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+    
+}
+
+#main .main_info .tr6 {
+    height: 50px;
+}
+
+#main .year_input input {
+    box-sizing: border-box;     
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+}
+#main .main_info .tr7 {
+    height: 100px;
+}
+
+#main .tel_input .tel {
+    box-sizing: border-box;     
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#main .tel_input .tel_check {
+    width: 14px;
+    height: 14px;
+    margin: 0 5px 0 10px;
+}
+
+#main .tel_input_text {
+    box-sizing: border-box;
+    width: 775px;
+    height: 35px;
+    margin: 10px 0 0 10px;
+    background-color: rgba(0, 128, 0, 0.459);
+}
+#main .tel_input_text p {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#main .main_info .tr8 {
+    height: 150px;
+}
+
+#main .address_input input {
+    box-sizing: border-box;     
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#main .address_input button {
+    margin-left: 5px;
+    width: 100px;
+    height: 35px;
+}
+
+#sample6_postcode {
+	cursor: default;
+}
+
+#sample6_postcode:focus {
+	outline: none;
+}
+
+#sample6_address {
+	cursor: default;
+}
+#sample6_address:focus {
+	outline: none;
+}
+
+#main .adress_input2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#main .adress_input2 input {
+    box-sizing: border-box;     
+    padding-left: 3px;
+    margin: 5px 0 0 10px;
+    width: 600px;
+    height: 35px;
+    font-size: 16px;
+}
+#main .main_info .tr9 {
+    height: 80px;
+}
+
+#main .email_input input{
+    box-sizing: border-box;     
+    padding-left: 3px;
+    margin-left: 10px;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+}
+
+#main .email_input span {
+    margin-left: 10px;
+}
+
+#main .email_input_check {
+    width: 14px;
+    height: 14px;
+    margin: 10px 5px 0 10px;
+}
+
+#main .email_input select {
+    margin-left: 5px;
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#main .btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#main .btn button {
+    margin: 10px 20px 30px 0;
+    
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+    
+}
+
+
+#main .btn .btn_ok {
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    
+}
+
+#main .btn .btn_no {
+    width: 70px;
+    height: 40px;
+    border: none;
+    background-color: #ccc;
+}
+
+footer{
+    position: absolute;
+    top: 1600px;
+}

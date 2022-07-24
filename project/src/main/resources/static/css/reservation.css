@@ -1,0 +1,109 @@
+#main .select_bar .focus{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.reserveBook_contents{
+    width: 920px;
+    height: 400px;
+}
+
+.reserveBook_List{
+    margin:  20px auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 900px;
+    height: 470px;
+}
+
+.reserveBook_List h2{
+    font-size: 22px;
+    line-height: 60px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 25px;
+    /* background-color: aqua; */
+}
+
+.reserveBook_table{
+    border: 2px solid #000;
+    border-bottom: 0;
+    border-right: 0;
+    border-collapse: collapse;
+}
+
+.reserveBook_table th{
+    font-size: 15px;
+    font-weight: 900;
+    background-color: skyblue;
+}
+
+.reserveBook_table td,th{
+    text-align: center;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 15px;
+    font-weight: 500;
+
+}
+
+.reserve_btn{
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    background-color: #fff;
+    color: rgb(178, 178, 27);
+    font-size: 15px;
+    font-weight: 900;
+}
+
+
+.reserveBook_table td:nth-child(1){
+    font-size: 15px;
+    font-weight: 900;
+    width: 100px;
+}
+
+.reserveBook_table td:nth-child(2){
+    width: 300px;
+}
+
+.reserveBook_table td:nth-child(3){
+    width: 200px;
+}
+
+.reserveBook_table td:nth-child(4){
+    width: 200px;
+}
+
+.reserveBook_table td:nth-child(5){
+    width: 170px;
+}
+
+.reserveBook_table td:nth-child(6){
+    width: 150px;
+}
+
+#main .selet_bar li:nth-child(3) a {
+    color:  blue;
+}
+
+
+
+
+
+
+
+/* foooter */
+footer{
+    position: absolute;
+    top: 970px;
+}
